@@ -1,0 +1,16 @@
+---
+- hosts: 192.168.0.39
+  roles:
+    - centos-elastic
+    - centos-grafana
+    - centos-lamp
+
+- hosts: 192.168.56.101
+  gather_facts: True
+  roles:
+    - ubuntu-elastic
+    - ubuntu-nagios
+    - ubuntu-nagios2
+    - ubuntu-nagios3
+    - ubuntu-grafana
+    - ubuntu-lamp
